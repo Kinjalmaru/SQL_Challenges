@@ -9,6 +9,7 @@ CREATE TABLE titles (
 );
 
 SELECT * FROM titles;
+
 --employees
 create table employees (
 	emp_no INT PRIMARY KEY,
@@ -45,10 +46,10 @@ select * from dept_manager;
 --dept_employees
 create table dept_emp (
 	emp_no INT,
-	dept_np VARCHAR,
+	dept_no VARCHAR,
 	FOREIGN KEY (dept_no) References departments(dept_no),
-	FOREIGN KEY (emp_np) References employees(emp_no),
-	PRIMARY KEY(emp_np, dept_no)
+	FOREIGN KEY (emp_no) References employees(emp_no),
+	PRIMARY KEY(emp_no, dept_no)
 	
 );
 
